@@ -1,5 +1,8 @@
 Particle[] particles;
 int j;
+int a = 0;
+int b = 0;
+int c = 0;
 void setup()
 {
   size(500, 500);
@@ -18,7 +21,13 @@ void setup()
 
 void draw()
 {
-   background(#151846);
+  if (a > 250 || b > 250 || c > 250)
+  {
+  a = (int)Math.random() * 150;
+  b = (int)Math.random() * 150;
+  c = (int)Math.random() * 150;
+}
+   background(a ++, b ++, c ++);
    for (int i = 0; i < particles.length; i ++)
   {
     particles[i].show();
